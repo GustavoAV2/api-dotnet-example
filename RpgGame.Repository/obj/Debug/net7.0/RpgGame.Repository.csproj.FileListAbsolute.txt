@@ -1,0 +1,17 @@
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\bin\Debug\net7.0\RpgGame.Repository.deps.json
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\bin\Debug\net7.0\RpgGame.Repository.runtimeconfig.json
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\bin\Debug\net7.0\RpgGame.Repository.dll
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\bin\Debug\net7.0\RpgGame.Repository.pdb
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\bin\Debug\net7.0\RpgGame.Domain.dll
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\bin\Debug\net7.0\RpgGame.Domain.pdb
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\RpgGame.Repository.csproj.AssemblyReference.cache
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\RpgGame.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\RpgGame.Repository.AssemblyInfoInputs.cache
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\RpgGame.Repository.AssemblyInfo.cs
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\RpgGame.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\RpgGame.Repository.csproj.CopyComplete
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\RpgGame.Repository.dll
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\refint\RpgGame.Repository.dll
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\RpgGame.Repository.pdb
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\RpgGame.Repository.genruntimeconfig.cache
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Repository\obj\Debug\net7.0\ref\RpgGame.Repository.dll

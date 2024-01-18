@@ -1,0 +1,12 @@
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\bin\Debug\net7.0\RpgGame.Domain.deps.json
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\bin\Debug\net7.0\RpgGame.Domain.dll
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\bin\Debug\net7.0\RpgGame.Domain.pdb
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.csproj.AssemblyReference.cache
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.AssemblyInfoInputs.cache
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.AssemblyInfo.cs
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.dll
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\refint\RpgGame.Domain.dll
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.pdb
+C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\ref\RpgGame.Domain.dll
