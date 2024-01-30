@@ -10,3 +10,15 @@ C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.
 C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\refint\RpgGame.Domain.dll
 C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.pdb
 C:\Users\Gustavo Voltolini\Desktop\MyCode\RpgGame\RpgGame.Domain\obj\Debug\net7.0\ref\RpgGame.Domain.dll
+C:\MyCode\rpg-game\RpgGame.Domain\bin\Debug\net7.0\RpgGame.Domain.deps.json
+C:\MyCode\rpg-game\RpgGame.Domain\bin\Debug\net7.0\RpgGame.Domain.dll
+C:\MyCode\rpg-game\RpgGame.Domain\bin\Debug\net7.0\RpgGame.Domain.pdb
+C:\MyCode\rpg-game\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyCode\rpg-game\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.AssemblyInfoInputs.cache
+C:\MyCode\rpg-game\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.AssemblyInfo.cs
+C:\MyCode\rpg-game\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.csproj.CoreCompileInputs.cache
+C:\MyCode\rpg-game\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.sourcelink.json
+C:\MyCode\rpg-game\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.dll
+C:\MyCode\rpg-game\RpgGame.Domain\obj\Debug\net7.0\refint\RpgGame.Domain.dll
+C:\MyCode\rpg-game\RpgGame.Domain\obj\Debug\net7.0\RpgGame.Domain.pdb
+C:\MyCode\rpg-game\RpgGame.Domain\obj\Debug\net7.0\ref\RpgGame.Domain.dll

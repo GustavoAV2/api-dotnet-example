@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "psG04r415r4RocVb9CNmUpZENU5szLkeX3uqoPuFa+DAoHQODEAs5CYXy+Wa4RSwjnRO6qjWjh6Gvk4qJ8XcIw==",
+  "dgSpecHash": "FQWdBVXPjc8W3qaYUhsI8ToWY1K8dzKg7V6f0E+8MfJytnMS780p7yrJT4IvapAvyFDsFeoeRUfvKKmXOwOsbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gustavo Voltolini\\Desktop\\MyCode\\RpgGame\\RpgGame.Domain\\RpgGame.Domain.csproj",
+  "projectFilePath": "C:\\MyCode\\rpg-game\\RpgGame.Domain\\RpgGame.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
