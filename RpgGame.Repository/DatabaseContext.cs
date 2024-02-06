@@ -14,6 +14,15 @@ namespace RpgGame.Repository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Weapon>().HasKey(w => w.Id);
+            modelBuilder.Entity<Weapon>().Property(w => w.HeroId);
+            modelBuilder
+                .Entity<Weapon>()
+                .HasOne(x => x.Hero)
+                .WithMany()
+                .HasForeignKey(x => x.HeroId)
+                .HasPrincipalKey(x => x.Id);
+
             modelBuilder.Entity<HeroBattle>().HasKey(x => new { x.HeroId, x.BattleId });
 
             modelBuilder.Entity<HeroBattle>().Property(x => x.BattleId).IsRequired();
