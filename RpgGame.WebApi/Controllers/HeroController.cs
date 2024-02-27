@@ -9,28 +9,26 @@ namespace RpgGame.WebApi.Controllers
     public class HeroController : ControllerBase
     {
         private readonly ILogger<HeroController> _logger;
-        private readonly DatabaseContext _databaseContext;
+        private readonly IEFCoreRepository _repo;
 
-        public HeroController(ILogger<HeroController> logger, DatabaseContext databaseContext)
+        public HeroController(ILogger<HeroController> logger, IEFCoreRepository repo)
         {
             _logger = logger;
-            _databaseContext = databaseContext;
+            _repo = repo;
         }
 
         [HttpPost]
         public ActionResult SaveHero(Hero hero)
         {
-            _databaseContext.Heroes.Add(hero);
-            _databaseContext.SaveChanges();
+            _repo.Add(hero);
             return Ok();
         }
 
         [HttpPut]
         public ActionResult PutHero(long id, Hero hero) { 
-            if (_databaseContext.Heroes.AsNoTracking().FirstOrDefault(u => u.Id == id) != null)
+            if (_repo.Heroes.AsNoTracking().FirstOrDefault(u => u.Id == id) != null)
             {
-                _databaseContext.Update(hero);
-                _databaseContext.SaveChanges();
+                _repo.Update(hero);
                 return Ok();
             }
             return Ok("Not Found!");
@@ -39,7 +37,7 @@ namespace RpgGame.WebApi.Controllers
         [HttpGet]
         public ActionResult<List<Hero>> GetHeroes()
         {
-            var heroes = _databaseContext.Heroes.ToList();
+            var heroes = _repo.Heroes.ToList();
             return Ok(heroes);
         }
     }

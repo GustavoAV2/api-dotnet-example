@@ -9,29 +9,38 @@ namespace RpgGame.WebApi.Controllers
     public class BattleController : ControllerBase
     {
         private readonly ILogger<BattleController> _logger;
-        private readonly DatabaseContext _databaseContext;
+        private readonly EFCoreRepository _repo;
 
-        public BattleController(ILogger<BattleController> logger, DatabaseContext databaseContext)
+        public BattleController(ILogger<BattleController> logger, EFCoreRepository repo)
         {
             _logger = logger;
-            _databaseContext = databaseContext;
+            _repo = repo;
         }
 
         [HttpPost]
         public async Task<ActionResult> SaveBattle(BattleDto battle)
         {
-            var newBattle = new Battle { Name = battle.Name, CreatedDate = DateTime.Now };
-            await _databaseContext.Battles.AddAsync(newBattle);
-            _databaseContext.SaveChanges();
-            await _databaseContext.HeroesBattles.AddAsync(new HeroBattle { BattleId = newBattle.Id, HeroId = battle.HeroId });
-            _databaseContext.SaveChanges();
-            return Ok();
+            try
+            {
+                var newBattle = new Battle { Name = battle.Name, CreatedDate = DateTime.Now };
+                _repo.Add(newBattle);
+                _repo.Add(new HeroBattle { BattleId = newBattle.Id, HeroId = battle.HeroId });
+                if (await _repo.SaveChangeAsync())
+                {
+                    return Ok();
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return BadRequest("Não foi possivel salvar!");
         }
 
         [HttpGet]
         public ActionResult<List<Battle>> GetBattles()
         {
-            var battles = _databaseContext.Battles.ToList();
+            var battles = _repo.GetAll<Battle>();
             return Ok(battles);
         }
     }

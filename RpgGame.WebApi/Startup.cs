@@ -21,6 +21,8 @@ namespace RpgGame.WebApi
             services.AddDbContext<DatabaseContext>(op => {
                     op.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
                 });
+
+            services.AddScoped<IEFCoreRepository, EFCoreRepository>();
             services.AddMvc();
         }
 
