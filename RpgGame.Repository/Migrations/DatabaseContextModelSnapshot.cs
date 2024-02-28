@@ -56,7 +56,7 @@ namespace RpgGame.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Heroes");
+                    b.ToTable("Hero");
                 });
 
             modelBuilder.Entity("RpgGame.Domain.Entities.HeroBattle", b =>
@@ -71,29 +71,7 @@ namespace RpgGame.Repository.Migrations
 
                     b.HasIndex("BattleId");
 
-                    b.ToTable("HeroesBattles");
-                });
-
-            modelBuilder.Entity("RpgGame.Domain.Entities.Weapon", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<long>("HeroId")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("HeroId");
-
-                    b.ToTable("Weapons");
+                    b.ToTable("HeroBattle");
                 });
 
             modelBuilder.Entity("RpgGame.Domain.Entities.HeroBattle", b =>
@@ -111,17 +89,6 @@ namespace RpgGame.Repository.Migrations
                         .IsRequired();
 
                     b.Navigation("Battle");
-
-                    b.Navigation("Hero");
-                });
-
-            modelBuilder.Entity("RpgGame.Domain.Entities.Weapon", b =>
-                {
-                    b.HasOne("RpgGame.Domain.Entities.Hero", "Hero")
-                        .WithMany()
-                        .HasForeignKey("HeroId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("Hero");
                 });

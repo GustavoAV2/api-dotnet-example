@@ -2901,39 +2901,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gustavo.voltolini\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Gustavo Voltolini\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MyCode\\rpg-game\\RpgGame.Repository\\RpgGame.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Gustavo Voltolini\\Desktop\\MyCode\\rpg-game\\RpgGame.Repository\\RpgGame.Repository.csproj",
       "projectName": "RpgGame.Repository",
-      "projectPath": "C:\\MyCode\\rpg-game\\RpgGame.Repository\\RpgGame.Repository.csproj",
-      "packagesPath": "C:\\Users\\gustavo.voltolini\\.nuget\\packages\\",
-      "outputPath": "C:\\MyCode\\rpg-game\\RpgGame.Repository\\obj\\",
+      "projectPath": "C:\\Users\\Gustavo Voltolini\\Desktop\\MyCode\\rpg-game\\RpgGame.Repository\\RpgGame.Repository.csproj",
+      "packagesPath": "C:\\Users\\Gustavo Voltolini\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gustavo Voltolini\\Desktop\\MyCode\\rpg-game\\RpgGame.Repository\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gustavo.voltolini\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Gustavo Voltolini\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\MyCode\\rpg-game\\RpgGame.Domain\\RpgGame.Domain.csproj": {
-              "projectPath": "C:\\MyCode\\rpg-game\\RpgGame.Domain\\RpgGame.Domain.csproj"
+            "C:\\Users\\Gustavo Voltolini\\Desktop\\MyCode\\rpg-game\\RpgGame.Domain\\RpgGame.Domain.csproj": {
+              "projectPath": "C:\\Users\\Gustavo Voltolini\\Desktop\\MyCode\\rpg-game\\RpgGame.Domain\\RpgGame.Domain.csproj"
             }
           }
         }
@@ -2977,7 +2972,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

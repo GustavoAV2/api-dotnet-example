@@ -12,8 +12,8 @@ using RpgGame.Repository;
 namespace RpgGame.Repository.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240129173709_Initial")]
-    partial class Initial
+    [Migration("20240228051608_CreateDatabase")]
+    partial class CreateDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,7 +59,7 @@ namespace RpgGame.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Heroes");
+                    b.ToTable("Hero");
                 });
 
             modelBuilder.Entity("RpgGame.Domain.Entities.HeroBattle", b =>
@@ -70,31 +70,11 @@ namespace RpgGame.Repository.Migrations
                     b.Property<long>("BattleId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
                     b.HasKey("HeroId", "BattleId");
 
                     b.HasIndex("BattleId");
 
-                    b.ToTable("HeroesBattles");
-                });
-
-            modelBuilder.Entity("RpgGame.Domain.Entities.Weapon", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Weapons");
+                    b.ToTable("HeroBattle");
                 });
 
             modelBuilder.Entity("RpgGame.Domain.Entities.HeroBattle", b =>

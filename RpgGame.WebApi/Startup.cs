@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RpgGame.Domain.Entities;
 using RpgGame.Repository;
+using System.Text.Json.Serialization;
 
 namespace RpgGame.WebApi
 {
@@ -22,8 +24,13 @@ namespace RpgGame.WebApi
                     op.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
                 });
 
-            services.AddScoped<IEFCoreRepository, EFCoreRepository>();
-            services.AddMvc();
+            services.AddScoped(typeof(IEFCoreRepository<>), typeof(EFCoreRepository<>));
+            services.AddMvc()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+                });
+
         }
 
         public void ConfigureWebApi(WebApplication app)

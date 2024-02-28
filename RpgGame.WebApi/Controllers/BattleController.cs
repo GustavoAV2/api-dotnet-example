@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RpgGame.Domain.Dto;
 using RpgGame.Domain.Entities;
 using RpgGame.Repository;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace RpgGame.WebApi.Controllers
 {
@@ -9,38 +12,42 @@ namespace RpgGame.WebApi.Controllers
     public class BattleController : ControllerBase
     {
         private readonly ILogger<BattleController> _logger;
-        private readonly EFCoreRepository _repo;
+        private readonly IEFCoreRepository<Battle> _repo;
 
-        public BattleController(ILogger<BattleController> logger, EFCoreRepository repo)
+        public BattleController(ILogger<BattleController> logger, IEFCoreRepository<Battle> repo)
         {
             _logger = logger;
             _repo = repo;
         }
 
         [HttpPost]
-        public async Task<ActionResult> SaveBattle(BattleDto battle)
+        public async Task<ActionResult> SaveBattle(Battle battle)
         {
             try
             {
-                var newBattle = new Battle { Name = battle.Name, CreatedDate = DateTime.Now };
-                _repo.Add(newBattle);
-                _repo.Add(new HeroBattle { BattleId = newBattle.Id, HeroId = battle.HeroId });
+                _repo.Add(battle);
+
                 if (await _repo.SaveChangeAsync())
                 {
+                    _logger.LogInformation("Battle saved: {battle}", battle);
                     return Ok();
                 }
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Failed to save battle: {battle}", battle);
                 return BadRequest(ex.Message);
             }
-            return BadRequest("Não foi possivel salvar!");
+
+            _logger.LogError("Failed to save battle: {battle}", battle);
+            return BadRequest("Failed to save battle");
         }
 
         [HttpGet]
-        public ActionResult<List<Battle>> GetBattles()
+        public async Task<ActionResult<List<Battle>>> GetBattles()
         {
-            var battles = _repo.GetAll<Battle>();
+            var battles = await _repo.GetAllAsync();
+            _logger.LogInformation("Retrieved {count} battles", battles.Count());
             return Ok(battles);
         }
     }

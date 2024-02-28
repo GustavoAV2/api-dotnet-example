@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace RpgGame.Repository.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class CreateDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,7 +26,7 @@ namespace RpgGame.Repository.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Heroes",
+                name: "Hero",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
@@ -35,50 +35,36 @@ namespace RpgGame.Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Heroes", x => x.Id);
+                    table.PrimaryKey("PK_Hero", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Weapons",
-                columns: table => new
-                {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Weapons", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "HeroesBattles",
+                name: "HeroBattle",
                 columns: table => new
                 {
                     BattleId = table.Column<long>(type: "bigint", nullable: false),
-                    HeroId = table.Column<long>(type: "bigint", nullable: false),
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    HeroId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HeroesBattles", x => new { x.HeroId, x.BattleId });
+                    table.PrimaryKey("PK_HeroBattle", x => new { x.HeroId, x.BattleId });
                     table.ForeignKey(
-                        name: "FK_HeroesBattles_Battles_BattleId",
+                        name: "FK_HeroBattle_Battles_BattleId",
                         column: x => x.BattleId,
                         principalTable: "Battles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_HeroesBattles_Heroes_HeroId",
+                        name: "FK_HeroBattle_Hero_HeroId",
                         column: x => x.HeroId,
-                        principalTable: "Heroes",
+                        principalTable: "Hero",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_HeroesBattles_BattleId",
-                table: "HeroesBattles",
+                name: "IX_HeroBattle_BattleId",
+                table: "HeroBattle",
                 column: "BattleId");
         }
 
@@ -86,16 +72,13 @@ namespace RpgGame.Repository.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "HeroesBattles");
-
-            migrationBuilder.DropTable(
-                name: "Weapons");
+                name: "HeroBattle");
 
             migrationBuilder.DropTable(
                 name: "Battles");
 
             migrationBuilder.DropTable(
-                name: "Heroes");
+                name: "Hero");
         }
     }
 }
