@@ -6,7 +6,6 @@ namespace RpgGame.Repository
     public class DatabaseContext : DbContext
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
-        public DbSet<Battle> Battles { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<HeroBattle>().HasKey(x => new { x.HeroId, x.BattleId });
